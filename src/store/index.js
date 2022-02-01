@@ -26,6 +26,17 @@ export default createStore({
       }
       updateLocalStorage(state.cart);
     },
+    removeFromCart(state, product) {
+      let item = state.cart.find((i) => i.id === product.id);
+      if (item) {
+        if (item.quantity > 1) {
+          item.quantity--;
+        } else {
+          state.cart = state.cart.filter((i) => i.id !== product.id);
+        }
+      }
+      updateLocalStorage(state.cart);
+    },
   },
   actions: {},
   modules: {},
