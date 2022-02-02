@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .product-cards-container {
   display: flex;
   flex-wrap: wrap;

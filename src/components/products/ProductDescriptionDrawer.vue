@@ -25,6 +25,7 @@
 <script>
 export default {
   props: ["product", "active"],
+  emits: ["close-product-drawer"],
   methods: {
     addToCart() {
       this.$store.commit("addToCart", this.product);
@@ -41,7 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .drawer-background {
   width: 100%;
   height: 100%;

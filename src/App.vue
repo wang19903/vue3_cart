@@ -10,6 +10,13 @@
   <router-view />
 </template>
 
+<script>
+export default {
+  mounted() {
+    this.$store.commit("updateCartFronStorage");
+  },
+};
+</script>
 <style lang="scss">
 html,
 body {

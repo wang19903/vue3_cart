@@ -13,6 +13,7 @@
 <script>
 export default {
   props: ["product"],
+  emits: ["view-product"],
   computed: {
     description() {
       return this.product.description.substring(0, 150);
@@ -20,7 +21,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .card {
   width: 80%;
   margin: 10%;
@@ -37,16 +38,18 @@ export default {
   p.text-muted {
     color: gray;
   }
-  button.view-product-button {
-    padding: 10px;
-    background-color: rgb(79, 160, 187);
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.15rem;
-    cursor: pointer;
-  }
 }
+
+button.view-product-button {
+  padding: 10px;
+  background-color: rgb(79, 160, 187);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
 @media (min-width: 500px) {
   .card {
     width: 350px;
